@@ -1,0 +1,17 @@
+/* header background photo: https://unsplash.com/photos/THJJRUhNlEc */
+
+*, *::after, *::before {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#121212;
+}
+.header-area{
+    background:url("images/header-bg.jpg") cover;
+    /* background-size: cover; */
+    min-height: 50vh;
+    width:100%;
+   
+}
