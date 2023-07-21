@@ -21,7 +21,6 @@ async function searchByTitle() {
   try {
     const response = await fetch(
       `http://www.omdbapi.com/?t=${inputEl.value}&apikey=8149b202`
- 
     );
     const data = await response.json();
     console.log(data);
@@ -30,12 +29,10 @@ async function searchByTitle() {
     console.error(err);
   }
 }
-console.log(typeof inputEl.value);
+
 searchByTitle("inception");
-searchBtn.addEventListener("click", 
-  (e) => {
-    e.preventDefault();
-    searchByTitle(inputEl.value);
-  }
-);
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  searchByTitle(inputEl.value);
+});
 // fetch(`http://www.omdbapi.com/?t=inception&apikey=8149b202`).then(resp=> resp.json().then(data=> console.log(data)))
