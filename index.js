@@ -3,6 +3,7 @@ const inputEl = document.querySelector(".search-input-area");
 const searchBtn = document.querySelector(".search-btn");
 const movieDivEl = document.querySelector(".movie-div");
 
+
 // Here is your key: 8149b202
 // https://www.omdbapi.com/
 
@@ -25,13 +26,16 @@ async function searchByTitle() {
     );
     const data = await response.json();
     console.log(data)
-    localStorage.setItem('movieData', JSON.stringify(data))
+   
     // console.log(localStorage.getItem('movieData' ))
-    movieDivEl.innerHTML = renderHTML(data);
+    movieDivEl.innerHTML = renderHTML(data)
+   
+  
   } catch (err) {
-    console.error(err);
-  }
-}
+    movieDivEl.innerHTML = `<div class="error-msg" > Unable to find what you're looking for. Please try another search.</div>`
+
+  }}
+// }"Unable to find what you're lookingfor.Please try another search."
 searchBtn.addEventListener("click", searchByTitle);
 // searchByTitle("inception");
 // searchBtn.addEventListener("click", (e) => {
@@ -56,7 +60,7 @@ function renderHTML(data) {
     <div class = "movie-info-text row gap-one" >
        <p class="runtime">${data.Runtime}</p>
        <p class="genre">${data.Genre}</p>
-       <div class="add-div ">
+       <div class="add-div">
        <img class ="add" src="images/plus-no-bg.png" alt="add button with plus sign">
        <button class ="add-btn" onclick="addMovieToWatchlist()" >Watchlist</button>
        </div>
@@ -71,4 +75,13 @@ function renderHTML(data) {
  `;
   return html;
 }
+let watchlist =[localStorage.getItem('data')] || [];
+function addMovieToWatchlist(){
+ 
+  watchlist.push(movieDivEl.innerHTML)
+  
+  localStorage.setItem('data', watchlist)
+  console.log(data);
 
+
+}

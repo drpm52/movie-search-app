@@ -107,6 +107,11 @@ body {
   justify-content: center;
   
 }
+.error-msg{
+  margin-top: 45%;
+  text-align: center;
+  margin: 40% auto 0 auto;
+}
 .movie-div{
   width:90%;
   margin: 0 auto;
