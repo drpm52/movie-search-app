@@ -96,13 +96,13 @@ body {
   max-width: 1000px;
 }
 /* movie cards */
-.add-btn{
+.add-btn, .remove-btn {
   background: none;
   color: white;
   border:none;
   
 }
-.add-div{
+.add-div, .remove-div {
   align-items: baseline;
   justify-content: center;
   
@@ -128,7 +128,7 @@ body {
  padding: 2em 1em;
  margin:0 auto;
 }
-.movie-info-text,.rating, .add-btn{
+.movie-info-text,.rating, .remove-btn{
   font-size: .75rem;
   font-weight: 400;
 }
@@ -170,7 +170,7 @@ body {
 .star{
   width:.9rem;
 }
-.add{
+.add, .remove{
   display: inline-block;
   width:1em;
   height:1em;

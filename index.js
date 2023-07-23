@@ -4,21 +4,7 @@ const searchBtn = document.querySelector(".search-btn");
 const movieDivEl = document.querySelector(".movie-div");
 
 
-// Here is your key: 8149b202
-// https://www.omdbapi.com/
 
-// Please append it to all of your API requests,
-
-// OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=8149b202
-
-// Click the following URL to activate your key: http://www.omdbapi.com/apikey.aspx?VERIFYKEY=eaf2aa07-b07e-4fef-90bb-45a30d79753c
-// If you did not make this request, please disregard this email.
-
-// search items
-// data.Title, data.Runtime,data.Genre, data.Plot, data.Ratings[0].Value   "8.8/10"
-
-// const rating = "8.8/10"
-// console.log(rating.slice(0,-3))
 async function searchByTitle() {
   try {
     const response = await fetch(
@@ -77,7 +63,18 @@ function renderHTML(data) {
 }
 let watchlist =[localStorage.getItem('data')] || [];
 function addMovieToWatchlist(){
- 
+//  const removeDiv = `<div class="remove-div">
+//  <img class ="remove" src="images/minus.icon.png" alt="remove button with minus sign">
+//  <button class ="remove-btn" onclick="removeMovieFromWatchlist()" >Watchlist</button>
+//  </div>`
+let removeDiv = document.createElement('div');
+removeDiv.classList.add('remove-div')
+removeDiv.innerHTML = `<img class ="remove" src="images/minus-icon-no-bg.png" alt="remove button with minus sign">
+  <button class ="remove-btn" onclick="removeMovieFromWatchlist()" >Remove</button>`
+ let addDiv = movieDivEl.querySelector('.add-div')
+
+ addDiv.replaceWith(removeDiv)
+
   watchlist.push(movieDivEl.innerHTML)
   
   localStorage.setItem('data', watchlist)
