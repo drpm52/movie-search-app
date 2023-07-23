@@ -27,3 +27,94 @@
 "BoxOffice":"$292,587,330",
 "Production":"N/A","Website":"N/A","Response":"True"}
 
+transfering data from one html page to another 
+https://www.codingem.com/javascript-pass-variable-from-html-page-to-another/#:~:text=One%20way%20to%20pass%20a,across%20different%20pages%20and%20sessions.
+
+page1
+window.onload = function() {
+   var value = prompt("Write a value here: ");
+   localStorage.setItem("inputValue", value);
+}
+page 1 
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function submitValue() {
+        // Get the value entered by the user
+        var input = document.getElementById('value-input');
+        var value = input.value;
+        
+        // Store the value in localStorage
+        localStorage.setItem('myValue', value);
+        
+        // Redirect to the second page
+        window.location.href = 'page2.html';
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Page 1</h1>
+    <p>Enter a value:</p>
+    <input type="text" id="value-input">
+    <button onclick="submitValue()">Submit</button>
+  </body>
+</html>
+
+
+page2
+window.onload = alert(localStorage.getItem("inputValue"));
+
+
+page2 code:
+<html>
+  <head>
+    <script>
+      window.onload = function() {
+        // Get the value from localStorage
+        var value = localStorage.getItem('myValue');
+        
+        // Display the value on the page
+        var output = document.getElementById('value-output');
+        output.innerText = value;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Page 2</h1>
+    <p>The value you entered on the first page was:</p>
+    <p id="value-output"></p>
+  </body>
+</html>
+
+
+local storage 
+================
+
+1. Setting a value:
+localStorage.setItem('myKey', 'myValue');
+
+2. Obtaining a value:
+var value = localStorage.getItem('myKey');
+
+3. Removing a value:
+localStorage.removeItem('myKey');
+
+4. Clearing all data:
+localStorage.clear();
+
+Note that localStorage can only store strings.
+
+So for example, if you want to carry an array from one HTML page to another, you can’t just store the array in localStorage as is. Instead, you need to convert it to a string like this:
+
+// Defining an array of numbers
+var myArray = [1, 2, 3];
+
+// Storing an array of numbers into the localStorage by converting it to a string
+localStorage.setItem('myArray', JSON.stringify(myArray));
+
+// Retrieving the array from localStorage and converting back to array from string
+var retrievedArray = JSON.parse(localStorage.getItem('myArray'));
+
+
+example: https://github.com/samc18/movie-watchlist/blob/master/index.js

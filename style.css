@@ -12,6 +12,7 @@
 body {
   background-color: #121212;
   font-family: "Inter", sans-serif;
+  color:#9ca3af;
 }
 
 .header-area {
@@ -42,6 +43,7 @@ body {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+
 .header-area a {
   text-decoration: none;
   font-family: inherit;
@@ -52,6 +54,7 @@ body {
   opacity: 70%;
   cursor: pointer;
 }
+
 .search-btn,
 .search-input-area {
   transform: translateY(-50%);
@@ -69,7 +72,7 @@ body {
   font-size: 0.88rem;
   font-weight: 400;
 
-  padding: 0.5em 3em;
+  padding: 0.5em 3.5em;
   width: 55%;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -85,7 +88,94 @@ body {
   justify-content: center;
   align-items: center;
 }
+.gap-one {
+  gap: 1em;
+}
 .container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
+/* movie cards */
+.add-btn{
+  background: none;
+  color: white;
+  border:none;
+  
+}
+.add-div{
+  align-items: baseline;
+  justify-content: center;
+  
+}
+.movie-div{
+  width:90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 800px;
+  margin:0 auto;
+  /* border: 3px solid red; */
+}
+.movie-card{
+  width:80%;
+ 
+ border-bottom: 1px solid rgb(156, 163, 175,.4);
+ padding: 2em 1em;
+ margin:0 auto;
+}
+.movie-info-text,.rating, .add-btn{
+  font-size: .75rem;
+  font-weight: 400;
+}
+.movie-info-div{
+  width:90%;
+  gap: 0.4em;
+  
+}
+.movie-poster-img{
+  display: inline-block;
+  width:5em;
+  margin-right: 1em;
+}
+.movie-title-rating-div{
+  justify-content:flex-start;
+  color:white;
+  gap:0.4em;
+  
+  /* border: 3px solid yellow; */
+}
+.movie-title{
+  font-size: 1.1rem;
+  font-weight: 500;
+  
+}
+.movie-info-text{
+  color: white;
+  /* border: 3px solid green; */
+
+ 
+}
+.movie-plot{
+  font-size: .75rem;
+  font-weight: 400;
+  color: rgba(165, 165, 165);
+  max-width: 60ch;
+}
+
+.star{
+  width:.9rem;
+}
+.add{
+  display: inline-block;
+  width:1em;
+  height:1em;
+  background: transparent;
+}
+
+@media (max-width:650px){
+.movie-info-text{
+  flex-direction: column;
+}
+
+}
+  
