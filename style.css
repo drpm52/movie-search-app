@@ -12,7 +12,7 @@
 body {
   background-color: #121212;
   font-family: "Inter", sans-serif;
-  color:#9ca3af;
+  color: #9ca3af;
 }
 
 .header-area {
@@ -33,7 +33,6 @@ body {
   font-size: 0.88rem;
   font-weight: 700;
 }
-
 
 .search-btn {
   width: 15%;
@@ -96,91 +95,91 @@ body {
   max-width: 1000px;
 }
 /* movie cards */
-.add-btn, .remove-btn {
+.add-btn,
+.remove-btn {
   background: none;
   color: white;
-  border:none;
-  
+  border: none;
 }
-.add-div, .remove-div {
+.add-div,
+.remove-div {
   align-items: baseline;
   justify-content: center;
-  
 }
-.error-msg{
+.error-msg {
   margin-top: 45%;
   text-align: center;
   margin: 40% auto 0 auto;
 }
-.movie-div{
-  width:90%;
+.movie-div {
+  width: 90%;
   margin: 0 auto;
   justify-content: space-between;
   flex-wrap: nowrap;
   max-width: 800px;
-  margin:0 auto;
+  margin: 0 auto;
   /* border: 3px solid red; */
 }
-.movie-card{
-  width:80%;
- 
- border-bottom: 1px solid rgb(156, 163, 175,.4);
- padding: 2em 1em;
- margin:0 auto;
+.movie-card {
+  width: 80%;
+
+  border-bottom: 1px solid rgb(156, 163, 175, 0.4);
+  padding: 2em 1em;
+  margin: 0 auto;
 }
-.movie-info-text,.rating, .remove-btn{
-  font-size: .75rem;
+.movie-info-text,
+.rating,
+.remove-btn {
+  font-size: 0.75rem;
   font-weight: 400;
 }
-.movie-info-div{
-  width:90%;
+.movie-info-div {
+  width: 90%;
   gap: 0.4em;
-  
 }
-.movie-poster-img{
+.movie-poster-img {
   display: inline-block;
-  width:5em;
+  width: 5em;
   margin-right: 1em;
 }
-.movie-title-rating-div{
-  justify-content:flex-start;
-  color:white;
-  gap:0.4em;
-  
+.movie-title-rating-div {
+  justify-content: flex-start;
+  color: white;
+  gap: 0.4em;
+
   /* border: 3px solid yellow; */
 }
-.movie-title{
+.movie-title {
   font-size: 1.1rem;
   font-weight: 500;
-  
 }
-.movie-info-text{
+.movie-info-text {
   color: white;
   /* border: 3px solid green; */
-
- 
 }
-.movie-plot{
-  font-size: .75rem;
+.movie-plot {
+  font-size: 0.75rem;
   font-weight: 400;
   color: rgba(165, 165, 165);
   max-width: 60ch;
 }
 
-.star{
-  width:.9rem;
+.star {
+  width: 0.9rem;
 }
-.add, .remove{
+.add,
+.remove {
   display: inline-block;
-  width:1em;
-  height:1em;
+  width: 1em;
+  height: 1em;
   background: transparent;
 }
-
-@media (max-width:650px){
-.movie-info-text{
-  flex-direction: column;
+.add-btn:hover,
+.add-btn:focus {
+  color: rgb(250, 186, 68);
 }
-
+@media (max-width: 650px) {
+  .movie-info-text {
+    flex-direction: column;
+  }
 }
-  

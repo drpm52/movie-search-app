@@ -27,6 +27,12 @@
 "BoxOffice":"$292,587,330",
 "Production":"N/A","Website":"N/A","Response":"True"}
 
+
+ <div class="movie-title-rating-div row  center ">
+        <h3 class ="movie-title">${movie.Title}</h3>
+        <img class= "star" src= "./images/star.png" alt="star emoji">
+        <p class= "rating">${movie.Ratings[0].Value.slice(0, -3)}</p>
+    </div>
 transfering data from one html page to another 
 https://www.codingem.com/javascript-pass-variable-from-html-page-to-another/#:~:text=One%20way%20to%20pass%20a,across%20different%20pages%20and%20sessions.
 
