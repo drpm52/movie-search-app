@@ -10,7 +10,7 @@ let searchResultArray = [];
 async function searchByTitle() {
   try {
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${inputEl.value}&type=movie&apikey=8149b202`
+      `https://www.omdbapi.com/?s=${inputEl.value}&type=movie&apikey=8149b202`
     );
     const data1 = await response.json();
     let movieArray = data1.Search;
@@ -19,7 +19,7 @@ async function searchByTitle() {
 
     const moviePromises = movieArray.map(async (movie) => {
       const repsonse2 = await fetch(
-        `http://www.omdbapi.com/?t=${movie.Title}&apikey=8149b202`
+        `https://www.omdbapi.com/?t=${movie.Title}&apikey=8149b202`
       );
 
       return repsonse2.json();
