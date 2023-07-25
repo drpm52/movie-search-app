@@ -175,7 +175,9 @@ body {
   background: transparent;
 }
 .add-btn:hover,
-.add-btn:focus {
+.add-btn:focus,
+.add-btn:hover,
+.remove-btn:focus {
   color: rgb(250, 186, 68);
 }
 @media (max-width: 650px) {
