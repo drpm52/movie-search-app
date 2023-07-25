@@ -15,8 +15,6 @@ async function searchByTitle() {
     const data1 = await response.json();
     let movieArray = data1.Search;
 
-    console.log(movieArray);
-
     const moviePromises = movieArray.map(async (movie) => {
       const repsonse2 = await fetch(
         `https://www.omdbapi.com/?t=${movie.Title}&apikey=8149b202`
@@ -26,7 +24,7 @@ async function searchByTitle() {
     });
 
     searchResultArray = await Promise.all(moviePromises);
-    console.log(searchResultArray);
+
     let movieHtml = searchResultArray
 
       .map((movie) => renderHTML(movie))

@@ -8,7 +8,7 @@ let watchListMoviesArray = watchListMovies.map((el) => JSON.parse(el));
 
 let watchListHtml = "";
 watchListHtml += watchListMoviesArray.map((data) => renderWatchlistHtml(data));
-//  console.log(watchListHtml);
+
 myWatchListEl.innerHTML = watchListHtml;
 
 function renderWatchlistHtml(data) {
